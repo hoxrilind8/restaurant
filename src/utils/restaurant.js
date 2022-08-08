@@ -9,7 +9,7 @@ export const restaurants = [
   {
     id: 1,
     name: 'Royal Sushi House',
-    type: ['🍣 Sushi'],
+    type: ['Sushi'],
     deliveryTime: '30-40min',
     price: '$32',
     image: sushi_house,
@@ -17,7 +17,7 @@ export const restaurants = [
   {
     id: 2,
     name: 'Burgers & Pizza',
-    type: ['🍔 Burger', '🍕 Pizza'],
+    type: ['Burger', 'Pizza'],
     deliveryTime: '40-60min',
     price: '$24',
     image: burgers_and_pizza,
@@ -25,7 +25,7 @@ export const restaurants = [
   {
     id: 3,
     name: 'Ninja Sushi',
-    type: ['🍣 Sushi'],
+    type: ['Sushi'],
     deliveryTime: '20-40min',
     price: '$40',
     image: ninja_sushi,
@@ -33,7 +33,7 @@ export const restaurants = [
   {
     id: 4,
     name: 'Sushi Master',
-    type: ['🍣 Sushi'],
+    type: ['Sushi'],
     deliveryTime: '60-70min',
     price: '$49',
     image: sushi_master,
@@ -41,7 +41,7 @@ export const restaurants = [
   {
     id: 5,
     name: 'Japanese Sushi',
-    type: ['🍣 Sushi'],
+    type: ['Sushi'],
     deliveryTime: '30-50min',
     price: '$104',
     image: japanese_sushi,
@@ -49,7 +49,7 @@ export const restaurants = [
   {
     id: 6,
     name: 'Kobe',
-    type: ['🍣 Sushi'],
+    type: ['Sushi'],
     deliveryTime: '20-30min',
     price: '$57',
     image: kobe,

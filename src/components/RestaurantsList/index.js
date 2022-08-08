@@ -1,9 +1,8 @@
-import React from 'react';
-import { restaurants } from '../../utils/restaurant';
+import React, { useState } from 'react';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CircleIcon from '@mui/icons-material/Circle';
 
-const RestaurantList = () => {
+const RestaurantList = ({ restaurants }) => {
   return (
     <div>
       <p class="m-2">Nearby Restaurants</p>
