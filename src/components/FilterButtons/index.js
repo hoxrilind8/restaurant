@@ -1,55 +1,29 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
-const FilterButtons = ({ filterRest }) => {
+export default function FilterButtons({ selectFilter, filters }) {
+  const onClick = useCallback((event) => {
+    const { id } = event.currentTarget;
+
+    return selectFilter(Number(id));
+  });
+
   return (
-    <div class="lg:flex m-2 justify-between mg:grid">
-      <div
-        class="p-6 mr-10 max-w-sm  w-full bg-white rounded-lg border border-gray-200 cursor-pointer"
-        onClick={() => filterRest('Pizza')}
-      >
-        <p class="text-center">🍕</p>
-        <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900">
-          Pizza
-        </h5>
-      </div>
-      <div
-        class="p-6 mr-10 max-w-sm w-full bg-white rounded-lg border border-gray-200 cursor-pointer"
-        onClick={() => filterRest('Burger')}
-      >
-        <p class="text-center">🍔</p>
-        <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900">
-          Burger
-        </h5>
-      </div>
-      <div class="p-6 mr-10 max-w-sm w-full bg-white rounded-lg border border-gray-200 cursor-pointer">
-        <p class="text-center">🥩</p>
-        <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900">
-          BBQ
-        </h5>
-      </div>
-      <div
-        class="p-6 mr-10 max-w-sm w-full bg-white rounded-lg border border-gray-200 cursor-pointer"
-        onClick={() => filterRest('Sushi')}
-      >
-        <p class="text-center">🍣</p>
-        <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900">
-          Sushi
-        </h5>
-      </div>
-      <div class="p-6 mr-10 max-w-sm w-full bg-white rounded-lg border border-gray-200 cursor-pointer">
-        <p class="text-center">🥦</p>
-        <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900">
-          Vegan
-        </h5>
-      </div>
-      <div class="p-6 mr-10 max-w-sm w-full bg-white rounded-lg border border-gray-200 cursor-pointer">
-        <p class="text-center">🧁</p>
-        <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900">
-          Desserts
-        </h5>
-      </div>
+    <div className="lg:flex lg:justify-evenly grid grid-cols-3 w-full">
+      {filters.map(({ id, icon, name, active }) => (
+        <div
+          className={`border sm:m-10 p-6  w-full rounded-lg cursor-pointer hover:border-myBlue hover:bg-primary ${
+            active ? 'border-myBlue bg-primary' : ''
+          }`}
+          key={id}
+          id={id}
+          onClick={onClick}
+        >
+          <p className="text-center">{icon}</p>
+          <h5 className="mb-2 text-l text-center font-semibold tracking-tight text-gray-900">
+            {name}
+          </h5>
+        </div>
+      ))}
     </div>
   );
-};
-
-export default FilterButtons;
+}
