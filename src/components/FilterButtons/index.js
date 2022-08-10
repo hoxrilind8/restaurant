@@ -8,7 +8,7 @@ export default function FilterButtons({ selectFilter, filters }) {
   });
 
   return (
-    <div className="container mx-auto lg:flex grid grid-cols-3 gap-4 ">
+    <div className="container mx-auto lg:flex grid grid-cols-3 gap-4 p-2">
       {filters.map(({ id, icon, name, active }) => (
         <div
           className={`border p-3 sm:w-full rounded-lg cursor-pointer hover:border-myBlue hover:bg-primary ${

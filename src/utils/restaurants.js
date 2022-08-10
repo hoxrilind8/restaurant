@@ -64,7 +64,7 @@ export const restaurants = [
     id: 7,
     name: 'BBQ',
     type: ['bbq'],
-    tag: ['🍣 Sushi'],
+    tag: ['🥩 BBQ'],
     deliveryTime: '20-30min',
     price: '$57',
     image: kobe,

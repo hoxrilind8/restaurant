@@ -5,7 +5,7 @@ import burgerImg from '../../assets/img/burger_card.png';
 
 export default function Cards() {
   return (
-    <div className="container mx-auto sm:flex sm:justify-evenly m-2">
+    <div className="container mx-auto my-2 sm:flex sm:justify-evenly p-2">
       <div className="flex mb-2 flex-col sm:mr-2 sm:w-1/2 rounded-lg md:flex-row bg-desertBckg">
         <div className="flex md:flex-col justify-between p-4">
           <div>
