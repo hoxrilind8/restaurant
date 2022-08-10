@@ -3,9 +3,9 @@ import React from 'react';
 import dessertImg from '../../assets/img/deserts_card.png';
 import burgerImg from '../../assets/img/burger_card.png';
 
-const Cards = () => {
+export default function Cards() {
   return (
-    <div className="sm:flex sm:justify-evenly m-2">
+    <div className="container mx-auto sm:flex sm:justify-evenly m-2">
       <div className="flex mb-2 flex-col sm:mr-2 sm:w-1/2 rounded-lg md:flex-row bg-desertBckg">
         <div className="flex md:flex-col justify-between p-4">
           <div>
@@ -26,7 +26,7 @@ const Cards = () => {
           alt="Desert"
         />
       </div>
-      <div className="flex mb-2 sm:w-1/2 flex-col rounded-lg md:flex-row md:max-w-xl bg-burgerBckg">
+      <div className="flex mb-2 flex-col sm:mr-2 sm:w-1/2 rounded-lg md:flex-row bg-burgerBckg">
         <div className="flex md:flex-col justify-between p-4">
           <div>
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
@@ -48,6 +48,4 @@ const Cards = () => {
       </div>
     </div>
   );
-};
-
-export default Cards;
+}

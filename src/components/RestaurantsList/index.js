@@ -6,7 +6,7 @@ import shoppingBag from '../../assets/img/shopping_bag.png';
 
 const RestaurantList = ({ restaurants }) => {
   return (
-    <div className="md:m-10">
+    <div className="container mx-auto">
       <p className="m-2">Nearby Restaurants</p>
       <div className="md:grid grid-cols-3 gap-4 m-2">
         {restaurants.map((restaurant) => (
