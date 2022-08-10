@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CircleIcon from '@mui/icons-material/Circle';
 
 const RestaurantList = ({ restaurants }) => {
   return (
-    <div>
+    <div class="m-10">
       <p class="m-2">Nearby Restaurants</p>
       <div class="lg:grid grid-cols-3 gap-4 m-2">
         {restaurants.map((restaurant) => (
@@ -35,8 +35,10 @@ const RestaurantList = ({ restaurants }) => {
                 <p class="ml-2">{restaurant.price} min sum</p>
               </div>
               <div class="flex">
-                {restaurant.type.map((type) => (
-                  <p class="mr-2 bg-slate-300 rounded-2xl p-1">{type}</p>
+                {restaurant.tag.map((type) => (
+                  <p key={type} class="mr-2 bg-slate-300 rounded-2xl p-1">
+                    {type}
+                  </p>
                 ))}
               </div>
             </div>
