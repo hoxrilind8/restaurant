@@ -37,6 +37,7 @@ export default function App() {
   return (
     <>
       <Navigation />
+      <hr />
       <Cards />
       <FilterButtons selectFilter={selectFilter} filters={filters} />
       <RestaurantList restaurants={restaurantsList} />

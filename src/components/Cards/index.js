@@ -5,9 +5,9 @@ import burgerImg from '../../assets/img/burger_card.png';
 
 const Cards = () => {
   return (
-    <div class="sm:flex sm:justify-evenly m-2">
-      <div class="flex mb-2 flex-col sm:w-1/2 flex-col rounded-lg border md:flex-row  bg-desertBckg">
-        <div class="flex lg:flex-col justify-between p-4">
+    <div class="sm:flex sm:justify-evenly m-2 ">
+      <div class="flex mb-2 flex-col sm:mr-2 sm:w-1/2 rounded-lg md:flex-row bg-desertBckg">
+        <div class="flex md:flex-col justify-between p-4">
           <div>
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
               All deserts
@@ -21,13 +21,13 @@ const Cards = () => {
           </div>
         </div>
         <img
-          class="object-cover rounded-t-lg md:h-auto  md:rounded-none md:rounded-l-lg sm:order-first"
+          class="object-cover rounded-t-lg md:h-auto md:rounded-none md:rounded-l-lg md:order-first"
           src={dessertImg}
-          alt=""
+          alt="Desert"
         />
       </div>
-      <div class="flex mb-2 sm:w-1/2 flex-col rounded-lg border md:flex-row md:max-w-xl bg-burgerBckg">
-        <div class="flex lg:flex-col justify-between p-4 ">
+      <div class="flex mb-2 sm:w-1/2 flex-col rounded-lg md:flex-row md:max-w-xl bg-burgerBckg">
+        <div class="flex md:flex-col justify-between p-4">
           <div>
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
               Big Burgers
@@ -41,9 +41,9 @@ const Cards = () => {
           </div>
         </div>
         <img
-          class="object-cover rounded-t-lg md:h-auto  md:rounded-none md:rounded-l-lg sm:order-first  "
+          class="object-cover rounded-t-lg md:h-auto md:rounded-none md:rounded-l-lg md:order-first  "
           src={burgerImg}
-          alt=""
+          alt="Burger"
         />
       </div>
     </div>

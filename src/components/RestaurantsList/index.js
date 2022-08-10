@@ -4,7 +4,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 
 const RestaurantList = ({ restaurants }) => {
   return (
-    <div class="sm:m-10">
+    <div class="md:m-10">
       <p class="m-2">Nearby Restaurants</p>
       <div class="md:grid grid-cols-3 gap-4 m-2">
         {restaurants.map((restaurant) => (
@@ -13,7 +13,7 @@ const RestaurantList = ({ restaurants }) => {
             class="mb-2 md:mt-2 bg-white rounded-lg border border-gray-200 "
           >
             <img
-              class="object-cover w-full rounded-t-lg md:h-auto md:rounded-none md:rounded-l-lg"
+              class="object-cover w-full rounded-lg md:h-auto rounded-b-none"
               src={restaurant.image}
               alt=""
             />
