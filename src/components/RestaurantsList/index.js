@@ -4,16 +4,16 @@ import CircleIcon from '@mui/icons-material/Circle';
 
 const RestaurantList = ({ restaurants }) => {
   return (
-    <div class="m-10">
+    <div class="sm:m-10">
       <p class="m-2">Nearby Restaurants</p>
-      <div class="lg:grid grid-cols-3 gap-4 m-2">
+      <div class="md:grid grid-cols-3 gap-4 m-2">
         {restaurants.map((restaurant) => (
           <div
             key={restaurant.id}
-            class="max-w-sm md:mt-2 bg-white rounded-lg border border-gray-200 dark:border-gray-300"
+            class="mb-2 md:mt-2 bg-white rounded-lg border border-gray-200 "
           >
             <img
-              class="rounded-t-lg object-cover h-48 w-96"
+              class="object-cover w-full rounded-t-lg md:h-auto md:rounded-none md:rounded-l-lg"
               src={restaurant.image}
               alt=""
             />

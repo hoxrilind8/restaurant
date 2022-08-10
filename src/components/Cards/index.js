@@ -5,7 +5,7 @@ import burgerImg from '../../assets/img/burger_card.png';
 
 const Cards = () => {
   return (
-    <div class="sm:flex justify-evenly m-2">
+    <div class="sm:flex sm:justify-evenly m-2">
       <div class="flex mb-2 flex-col sm:w-1/2 flex-col rounded-lg border md:flex-row  bg-desertBckg">
         <div class="flex lg:flex-col justify-between p-4">
           <div>
