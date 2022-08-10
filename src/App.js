@@ -9,11 +9,13 @@ import { restaurants } from './utils/restaurants';
 import { allFilters } from './utils/filters';
 
 export default function App() {
-  const [filters, setFilters] = useState(allFilters);
+  const [restaurantFilters, setFilters] = useState(allFilters);
 
   function selectFilter(filterId) {
-    const selectedFilterIndex = filters.findIndex(({ id }) => id === filterId);
-    const newFilters = [...filters];
+    const selectedFilterIndex = restaurantFilters.findIndex(
+      ({ id }) => id === filterId
+    );
+    const newFilters = [...restaurantFilters];
 
     if (newFilters[selectedFilterIndex].active) {
       newFilters[selectedFilterIndex].active = false;
@@ -24,7 +26,7 @@ export default function App() {
     return setFilters(newFilters);
   }
 
-  const activeFilters = filters.filter((filter) => filter.active);
+  const activeFilters = restaurantFilters.filter((filter) => filter.active);
   const activeFiltersType = activeFilters.map(({ filterType }) => filterType);
 
   const filteredRestaurants = restaurants.filter(({ type }) => {
@@ -39,7 +41,7 @@ export default function App() {
       <Navigation />
       <hr />
       <Cards />
-      <FilterButtons selectFilter={selectFilter} filters={filters} />
+      <FilterButtons selectFilter={selectFilter} filters={restaurantFilters} />
       <RestaurantList restaurants={restaurantsList} />
     </>
   );
