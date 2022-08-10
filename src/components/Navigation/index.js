@@ -1,6 +1,7 @@
 import React from 'react';
 
 import avatar from '../../assets/img/avatar.png';
+import shoppingBag from '../../assets/img/shopping_bag.png';
 
 const Navigation = () => {
   return (
@@ -14,10 +15,40 @@ const Navigation = () => {
               </p>
               <p class="text-myBlue">delivery</p>
             </div>
+            <div class="hidden relative md:block ml-10">
+              <div class="flex absolute inset-y-0 right-0 items-center pl-3 pointer-events-none">
+                <svg
+                  class="w-5 h-5 text-gray-500"
+                  aria-hidden="true"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="sr-only">Search icon</span>
+              </div>
+              <input
+                type="text"
+                id="search-navbar"
+                class="block p-2 w-full text-gray-900 bg-searchBckg rounded-lg sm:text-sm "
+                placeholder="Search"
+              />
+            </div>
           </div>
         </div>
         <div className="flex">
           <div class="flex items-center md:order-2">
+            <span class="p-1.5 rounded-lg bg-shoppingBckg mr-2">
+              <img
+                class="w-6 h-6 rounded-lg  bg-shoppingBckg"
+                src={shoppingBag}
+                alt="shopping bag"
+              />
+            </span>
             <img
               class="w-8 h-8 rounded-lg ring-2 ring-gray-300 p-0.5"
               src={avatar}
@@ -36,7 +67,6 @@ const Navigation = () => {
                 aria-hidden="true"
                 fill="currentColor"
                 viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   fill-rule="evenodd"

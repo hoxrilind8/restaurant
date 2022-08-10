@@ -11,6 +11,8 @@ module.exports = {
         burgerDiscount: '#FD6D22',
         infoDiscount: '#83859C',
         primary: '#F8F9FF',
+        shoppingBckg: '#F3F4FF',
+        searchBckg: '#EDEEF2',
       },
       fontFamily: 'Nunito',
     },

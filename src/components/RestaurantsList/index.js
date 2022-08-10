@@ -2,6 +2,8 @@ import React from 'react';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CircleIcon from '@mui/icons-material/Circle';
 
+import shoppingBag from '../../assets/img/shopping_bag.png';
+
 const RestaurantList = ({ restaurants }) => {
   return (
     <div class="md:m-10">
@@ -18,9 +20,16 @@ const RestaurantList = ({ restaurants }) => {
               alt=""
             />
             <div class="p-5">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-                {restaurant.name}
-              </h5>
+              <div class="flex justify-between">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                  {restaurant.name}
+                </h5>
+                <img
+                  class="w-6 h-6 rounded-lg mr-2 bg-shoppingBckg"
+                  src={shoppingBag}
+                  alt="shopping bag"
+                />
+              </div>
               <div class="mb-3 flex font-normal text-gray-700 dark:text-gray-400">
                 <AccessTimeIcon />
                 <p class="ml-2">{restaurant.deliveryTime}</p>
