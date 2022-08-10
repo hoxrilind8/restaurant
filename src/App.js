@@ -9,7 +9,7 @@ import { restaurants } from './utils/restaurants';
 import { allFilters } from './utils/filters';
 
 export default function App() {
-  const [restaurantFilters, setFilters] = useState(allFilters);
+  const [restaurantFilters, setRestaurantFilters] = useState(allFilters);
 
   function selectFilter(filterId) {
     const selectedFilterIndex = restaurantFilters.findIndex(
@@ -19,11 +19,11 @@ export default function App() {
 
     if (newFilters[selectedFilterIndex].active) {
       newFilters[selectedFilterIndex].active = false;
-      return setFilters(newFilters);
+      return setRestaurantFilters(newFilters);
     }
 
     newFilters[selectedFilterIndex].active = true;
-    return setFilters(newFilters);
+    return setRestaurantFilters(newFilters);
   }
 
   const activeFilters = restaurantFilters.filter((filter) => filter.active);
